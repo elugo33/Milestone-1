@@ -22,6 +22,14 @@ class Card{
         this.suit=suit
         this.value=value
     }
+    get color()
+return this.suit === '♠' || this.suit==='♣' ? 'black': 'red'
+}
+getHTML() {
+    const cardDiv= document.createElement('div')
+    cardDiv.innerText=this.suit
+    cardDiv.classList.add ("card", this.color)
+}
 }
 function freshDeck(){
     return SUITS.flatMap(suit =>{
@@ -29,4 +37,10 @@ function freshDeck(){
             return new Card (suit, value)
         })
     })
+    
 }
+
+
+
+cardDiv.dataset.value = `${this.value} ${this.suit}`
+return cardDiv
