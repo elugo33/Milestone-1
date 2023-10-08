@@ -11,8 +11,15 @@
     cursor: pointer;
     justify-content: center;
     padding-top: 1rem;
+    background-color: aliceblue;
   }
-  
+  .cannon{
+    margin: 0;
+    height: 12em;
+    width: 24em;
+    justify-content: center;
+    align-items: center;
+  }
   .deck {
     height: 100%;
     width: 100%;
