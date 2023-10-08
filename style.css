@@ -1,7 +1,8 @@
-*::after, *::before{
-    box-sizing:border-box;
-}
-body{
+*, *::after, *::before { 
+    box-sizing: border-box;
+  }
+  
+  body {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(2, 4rem);
@@ -9,77 +10,75 @@ body{
     gap: .5rem;
     cursor: pointer;
     justify-content: center;
-    padding-top: ; 1rem;
-}
-.deck{
+    padding-top: 1rem;
+  }
+  
+  .deck {
     height: 100%;
     width: 100%;
     border: 1px solid black;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
+    font-size: 3rem;
     border-radius: .5rem;
-    color: : white;
+    color: white;
     user-select: none;
-}
-.card-slot{
-    height: 100%;
-    width: 100%;
-    border: 1px solid black;
-    justify-content: center;
-    align-items: center;
-    font-size: 3.5rem;
-    border-radius: .5rem;
-    color: : white;
-    user-select: none;
-}
-.computer-deck{
-    background-color: green;
-}
-
-.player-deck{
-    background-color: purple;
-}
-.text{
-    grid-column: span 2;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-.card{
-position:relative;
-height:100%
-width:100%
-border:1px solid black;
-border-radius:.5rem;
-display:flex;
-justify-content:center;
-align-items: center;
-font-size: 4rem;
-}
-.card.red{
-    color:red;
-}
-
-.card.black{
-    color: black;
-}
-
-.card::before,
-.card::after{
-    color:white;
-    position: absolute;
-    content:attr(data-value);
-    font-size: 1rem;
    
+  }
+  
+  .computer-deck {
+    background-color: green;
     
-}
-.card::before{
-    top.5rem;
-    left: .5rem;
-}
-.card::after{
+    
+  }
+  
+  .player-deck {
+    background-color: purple;
+  
+  }
+  
+  .text {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+  }
+  
+  .card.red {
+    color: red;
+  }
+  
+  .card.black {
+    color: black;
+  }
+  
+  .card::before,
+  .card::after {
+    position: absolute;
+    content: attr(data-value);
+    font-size: 1rem;
+  }
+  
+  .card::before {
+    top: .5rem;
+    left: .5rem
+  }
+  
+  .card::after {
     bottom: .5rem;
-    right:.5rem;
+    right: .5rem;
     transform: rotate(180deg);
-}
+  }
